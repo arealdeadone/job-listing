@@ -1,0 +1,14 @@
+.vertical-left-divider{
+  border-left: 0.25px solid rgba(200,200,200,0.8);
+}
+
+.vertical-right-divider{
+  border-right: 0.25px solid rgba(200,200,200,0.8);
+}
+
+.jumbotron
+{
+  margin-bottom: 0;
+  max-height: 91vh;
+  min-height: 91vh;
+}

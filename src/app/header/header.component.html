@@ -1,0 +1,20 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" [routerLink]="['']">Job Listing</a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav nav-padding space-around">
+      <a class="nav-item nav-link" href="#">Find Jobs </a>
+      <a class="nav-item nav-link" href="#">Recruit Talent</a>
+      <a class="nav-item nav-link" href="#">About Us</a>
+      <a class="nav-item nav-link" href="#">Pricing</a>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <a class="nav-item nav-link" routerLinkActive="active" [routerLink]="['/signup']">Join</a>
+      <a class="nav-item nav-link" routerLinkActive="active" [routerLink]="['/login']">Log In</a>
+    </div>
+  </div>
+</nav>

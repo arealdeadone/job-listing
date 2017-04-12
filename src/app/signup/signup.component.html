@@ -27,13 +27,13 @@
               <input type="password" id="password" class="form-control" placeholder="Your Password here" required>
             </div>
             <div class="form-group">
-              <button type="button" class="btn btn-outline-primary btn-block">Sign Up</button>
-              <br/>
               <small class="form-text text-muted">
-                By signing up, I agree to Job Listing's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
-              </small>
+                By signing up, I agree to Job Listing's <a href="javascript:void(0)">Terms of Service</a> and <a href="javascript:void(0)">Privacy Policy</a>.
+              </small><br/>
+              <button type="button" class="btn btn-outline-primary btn-block">Sign Up</button>
             </div>
           </form>
+          <small class="text-muted">Already a member? <a [routerLink]="['/login']">Login Here</a></small>
         </div>
         <div class="col-md-6 vertical-left-divider">
           <h3 class="text-center text-info">Or Signup With</h3><br/><br/>

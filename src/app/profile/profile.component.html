@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="profile-sidebar">
+          <br/>
+          <img src="assets/images/profile-placeholder.jpg" class="offset-3 img-responsive img-fluid" height="50%" width="50%">
+          <div class="container">
+            <br/>
+            <h5 class="offset-4">
+              <a [routerLink]="['/profile']">{{user.username | uppercase}}</a>
+            </h5>
+            <ul class="nav nav-pills flex-column text-center text-capitalize">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/profile','create-company']" routerLinkActive="active">Create Company</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/profile','post-job']" routerLinkActive="active">Post Jobs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

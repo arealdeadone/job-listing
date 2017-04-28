@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <br>
+  <h2 class="text-center text-success">Post A Job</h2>
+  <br>
+  <hr>
+  <form #f="ngForm">
+    <div class="form-group">
+      <label for="j_c_name">Select Company</label>
+      <select class="form-control" name="j_c_name" id="j_c_name" ngModel #compan="ngModel">
+        <option value="">--SELECT COMPANY--</option>
+        <option *ngFor="let company of companies" [value]="company.company_id">{{company.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="j_title">Job Title</label>
+      <input type="text" name="j_title" id="j_title" class="form-control" ngModel required autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="j_description">Job Description</label>
+      <textarea class="form-control" name="j_description" id="j_description" rows="5" ngModel required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="j_location">Enter Job Locations and Press Enter: </label>
+      <jaspero-chips class="form-control" (selectedChange)="addLocations($event)" id="j_location"></jaspero-chips>
+    </div>
+    <div class="form-group">
+      <label for="j_type">Job Type</label>
+      <select name="j_type" class="form-control" id="j_type" ngModel #type="ngModel">
+        <option value="">--Select Job Type--</option>
+        <option value="PartTime">Part Time</option>
+        <option value="FullTime">Full Time</option>
+        <option value="InternPartTime">Internship (Part Time)</option>
+        <option value="InternFullTime">Internship (Full Time)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="j_req">Job Requirements</label>
+      <textarea class="form-control" name="j_req" id="j_req" rows="10" ngModel required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="j_comp">Compensation Paid</label>
+      <input type="number" placeholder="Rs." class="form-control" name="j_comp" id="j_comp" rows="10" ngModel required/>
+    </div>
+    <div class="form-group">
+      <button type="button" (click)="createJob(f)" class="btn btn-outline-success btn-block" [disabled]="f.invalid || !locations.length || !type.value || !compan.value">Post Job</button>
+    </div>
+  </form>
+</div>

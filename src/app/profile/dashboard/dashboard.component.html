@@ -1,0 +1,74 @@
+<div class="container-fluid">
+  <br/>
+  <h2>Dashboard</h2><hr/>
+  <br/>
+  <!--<h3>Jobs Applied</h3>-->
+  <!--<table class="table table-inverse table-bordered table-hover">-->
+    <!--<tr>-->
+      <!--<th colspan="2">S. No</th>-->
+      <!--<th colspan="4">Name Of Company</th>-->
+      <!--<th colspan="4">Position Applied</th>-->
+      <!--<th colspan="2">Status</th>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="2">1</td>-->
+      <!--<td colspan="4">Lorem Ipsum</td>-->
+      <!--<td colspan="4">Lorem Ipsum</td>-->
+      <!--<td colspan="2">Lorem Ipsum</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="2">1</td>-->
+      <!--<td colspan="4">Lorem Ipsum</td>-->
+      <!--<td colspan="4">Lorem Ipsum</td>-->
+      <!--<td colspan="2">Lorem Ipsum</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="2">1</td>-->
+      <!--<td colspan="4">Lorem Ipsum</td>-->
+      <!--<td colspan="4">Lorem Ipsum</td>-->
+      <!--<td colspan="2">Lorem Ipsum</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td colspan="2">1</td>-->
+      <!--<td colspan="4">Lorem Ipsum</td>-->
+      <!--<td colspan="4">Lorem Ipsum</td>-->
+      <!--<td colspan="2">Lorem Ipsum</td>-->
+    <!--</tr>-->
+  <!--</table>-->
+  <!--<br>-->
+  <hr>
+  <br>
+  <h3>Companies Created</h3>
+  <table class="table table-inverse table-bordered table-hover">
+    <tr>
+      <th colspan="2">Company Id</th>
+      <th colspan="4">Name Of Company</th>
+      <th colspan="4">Number of Employees</th>
+      <th colspan="2">Locations</th>
+    </tr>
+    <tr *ngFor="let company of companies">
+      <td colspan="2">{{company.company_id}}</td>
+      <td colspan="4">{{company.name}}</td>
+      <td colspan="4">{{company.no_of_employees}}</td>
+      <td colspan="2">{{company.locations}}</td>
+    </tr>
+  </table>
+  <br>
+  <hr>
+  <br>
+  <h3>Jobs Posted</h3>
+  <table class="table table-inverse table-bordered table-hover">
+    <tr>
+      <th colspan="2">Job Id</th>
+      <th colspan="4">Company Id</th>
+      <th colspan="4">Job Title</th>
+      <th colspan="2">Locations</th>
+    </tr>
+    <tr *ngFor="let job of jobs">
+      <td colspan="2">{{job.job_id}}</td>
+      <td colspan="4">{{job.company_id}}</td>
+      <td colspan="4">{{job.title}}</td>
+      <td colspan="2">{{job.location}}</td>
+    </tr>
+  </table>
+</div>

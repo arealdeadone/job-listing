@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthenticationService} from "../services/authentication.service";
 
 @Component({
   selector: 'app-signup',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthenticationService) { }
+
+  signup(formData){
+    this.authService.signup(formData.value).subscribe(response => {
+      response = response.json();
+      console.log(response);
+    })
+  }
 
   ngOnInit() {
   }

@@ -12,25 +12,25 @@
     <div class="col-md-8">
       <div class="row">
         <div class="col-md-6 vertical-right-divider">
-          <form>
+          <form #f="ngForm">
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" aria-describedby="emailHelp" id="email" class="form-control" placeholder="Your Email here" required>
+              <label for="email">Email/Username</label>
+              <input type="text" aria-describedby="emailHelp" id="email" name="email" class="form-control" placeholder="Your Email here" ngModel required>
             </div>
             <div class="form-group">
               <label for="password">Passoword</label>
-              <input type="password" id="password" class="form-control" placeholder="Your Password here" required>
+              <input type="password" id="password" class="form-control" placeholder="Your Password here" name="password" ngModel required>
             </div>
             <div class="form-group">
-              <button type="button" class="btn btn-outline-primary btn-block">Login</button>
+              <button type="button" class="btn btn-outline-primary btn-block" [disabled]="f.invalid || isDisabled" (click)="login(f)">{{buttonText}}</button>
             </div>
           </form>
           <small class="text-muted">Need to Join? <a [routerLink]="['/signup']">Sign Up Here</a></small>
         </div>
         <div class="col-md-6 vertical-left-divider">
           <h3 class="text-center text-info">Or Login With</h3><br/><br/>
-          <button class="btn btn-outline-primary btn-block">Login With Facebook</button><br/>
-          <button class="btn btn-outline-danger btn-block">Login With Google</button>
+          <button class="btn btn-outline-primary btn-block" [disabled]="isDisabled">Login With Facebook</button><br/>
+          <button class="btn btn-outline-danger btn-block" [disabled]="isDisabled">Login With Google</button>
         </div>
       </div>
     </div>
